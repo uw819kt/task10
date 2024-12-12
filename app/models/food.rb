@@ -1,7 +1,4 @@
 class Food < ApplicationRecord
   belongs_to :shop
-  has_many :orders, through: :order_foods
-  has_one :chinese_food
-  has_one :italian_food
-  has_one :japanese_food
+  has_and_belongs_to_many :orders
 end
