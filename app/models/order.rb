@@ -1,5 +1,6 @@
 class Order < ApplicationRecord
-  belongs_to :address
-  belongs_to :customer
-  has_and_belongs_to_many :foods
+  belongs_to :address#ok
+  belongs_to :customer#ok
+  has_many :foods
+  has_many :foods, turough: :order_foods
 end
